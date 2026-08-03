@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Ashutosh Nagaria — Product Manager</title>
+  <meta name="description" content="Ashutosh Nagaria — Product Manager specializing in AI-native enterprise products. Led EmployeeWorks from concept to GA in 6 months at ServiceNow, scaled Notifications to 250M+/month, designed the People Finder AI Agent on Knowledge Graphs." />
+  <link rel="canonical" href="https://ashupfolio-yndcji2y.manus.space/" />
+  <meta property="og:title" content="Ashutosh Nagaria — Product Manager" />
+  <meta property="og:description" content="AI-native enterprise product leader. EmployeeWorks (0 to GA in 6 months), People Finder AI Agent, Notifications Engine at 250M+/month." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashupfolio-yndcji2y.manus.space/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8;
+      --charcoal: #1A1A1A;
+      --sienna: #C75B39;
+      --warm-gray: #E8E6E1;
+      --warm-mid: #6B6560;
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-mono: 'DM Mono', ui-monospace, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--charcoal); line-height: 1.6; overflow-x: hidden; }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* Navbar */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 80px; padding: 0 2rem; transition: background 0.3s, box-shadow 0.3s; }
+    .navbar.scrolled { background: rgba(250,250,248,0.95); backdrop-filter: blur(8px); box-shadow: 0 1px 0 0 rgba(0,0,0,0.06); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: rgba(26,26,26,0.7); transition: color 0.2s; position: relative; }
+    .nav-links a:hover { color: var(--charcoal); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--sienna); transition: width 0.2s; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--sienna); color: #fff !important; padding: 8px 16px; border-radius: 2px; font-size: 0.875rem; font-weight: 500; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.9; }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 10px; }
+    .hamburger span { width: 20px; height: 1.5px; background: var(--charcoal); transition: all 0.3s; }
+
+    /* Hero */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 2rem 80px; position: relative; background: linear-gradient(135deg, rgba(232,230,225,0.15) 0%, transparent 50%), var(--bg); }
+    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 96px; background: linear-gradient(to top, var(--bg), transparent); }
+    .hero-inner { max-width: 1280px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .hero-label { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--sienna); margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+    .hero h1 .accent { color: var(--sienna); }
+    .hero-desc { margin-top: 2rem; font-size: 1.0625rem; line-height: 1.8; color: var(--warm-mid); max-width: 36rem; }
+    .hero-actions { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; padding: 12px 24px; background: var(--charcoal); color: #fff; font-size: 0.875rem; font-weight: 500; border-radius: 2px; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-outline { display: inline-flex; padding: 12px 24px; border: 1px solid rgba(26,26,26,0.2); font-size: 0.875rem; font-weight: 500; border-radius: 2px; transition: border-color 0.2s, color 0.2s; }
+    .btn-outline:hover { border-color: var(--sienna); color: var(--sienna); }
+    .hero-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .metric-card { padding: 1.5rem; background: rgba(255,255,255,0.6); backdrop-filter: blur(4px); border: 1px solid var(--warm-gray); border-radius: 2px; }
+    .metric-value { font-family: var(--font-display); font-weight: 300; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; color: var(--sienna); }
+    .metric-label { margin-top: 0.5rem; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--warm-mid); }
+
+    /* Sections */
+    section { padding: 100px 2rem; }
+    .section-inner { max-width: 1280px; margin: 0 auto; }
+    .section-label { display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem; }
+    .section-label .diamond { width: 8px; height: 8px; transform: rotate(45deg); background: var(--sienna); flex-shrink: 0; }
+    .section-label p { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--sienna); }
+    .section-label .line { flex: 1; height: 1px; background: var(--warm-gray); }
+    .section-divider { height: 1px; background: linear-gradient(to right, transparent, rgba(199,91,57,0.4), transparent); margin: 0 2rem; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 4rem; }
+    .about-grid h2 { font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+    .about-text { margin-top: 2rem; font-size: 1rem; line-height: 1.8; color: var(--warm-mid); }
+    .about-text p { margin-bottom: 1.25rem; }
+    .about-stats { display: flex; gap: 2rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--warm-gray); }
+    .about-stat-value { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--charcoal); }
+    .about-stat-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--warm-mid); margin-top: 0.25rem; }
+    .profile-photo-wrap { display: flex; justify-content: center; margin-bottom: 2rem; }
+    .profile-photo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .quote-card { position: relative; padding: 2.5rem; background: #fff; border: 1px solid var(--warm-gray); border-radius: 2px; }
+    .quote-card::before, .quote-card::after { content: ''; position: absolute; width: 24px; height: 24px; border-color: var(--sienna); border-style: solid; }
+    .quote-card::before { top: -12px; left: -12px; border-width: 2px 0 0 2px; }
+    .quote-card::after { bottom: -12px; right: -12px; border-width: 0 2px 2px 0; }
+    .quote-icon { width: 32px; height: 32px; fill: rgba(199,91,57,0.3); margin-bottom: 1.5rem; }
+    .quote-text { font-family: var(--font-display); font-size: 1.125rem; line-height: 1.7; color: var(--charcoal); font-style: italic; }
+    .quote-author { margin-top: 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--warm-mid); }
+
+    /* Experience */
+    .experience-section { background: #fff; }
+    .experience-section h2 { font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 4rem; }
+    .timeline { position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 12px; top: 0; bottom: 0; width: 1px; background: var(--warm-gray); }
+    .timeline-item { position: relative; padding-left: 3rem; padding-bottom: 4rem; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot { position: absolute; left: 0; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--sienna); border: 2px solid var(--bg); }
+    .timeline-item h3 { font-size: 1.5rem; font-weight: 700; color: var(--charcoal); }
+    .timeline-company { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sienna); margin-top: 0.5rem; }
+    .timeline-period { display: flex; gap: 1rem; font-size: 0.875rem; color: var(--warm-mid); margin-top: 0.25rem; flex-wrap: wrap; }
+    .timeline-highlights { margin-top: 1.5rem; }
+    .timeline-highlights li { display: flex; gap: 0.75rem; font-size: 0.9375rem; line-height: 1.7; color: var(--warm-mid); margin-bottom: 0.75rem; }
+    .timeline-highlights li::before { content: ''; margin-top: 0.625rem; width: 4px; height: 4px; border-radius: 50%; background: var(--sienna); flex-shrink: 0; }
+    .timeline-metrics { display: flex; gap: 2rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--warm-gray); }
+    .timeline-metric-value { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--sienna); }
+    .timeline-metric-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--warm-mid); margin-top: 0.125rem; }
+
+    /* Projects */
+    .projects-section h2 { font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 4rem; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
+    .project-card { position: relative; padding: 2rem; background: #fff; border: 1px solid var(--warm-gray); border-radius: 2px; transition: box-shadow 0.3s, border-color 0.3s; }
+    .project-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.06); border-color: rgba(199,91,57,0.2); }
+    .project-number { position: absolute; top: 1.5rem; right: 1.5rem; font-family: var(--font-mono); font-size: 3rem; font-weight: 300; color: var(--warm-gray); line-height: 1; }
+    .project-subtitle { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sienna); margin-bottom: 0.5rem; }
+    .project-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1rem; }
+    .project-card > p { font-size: 0.875rem; line-height: 1.7; color: var(--warm-mid); margin-bottom: 1.5rem; }
+    .project-impact { padding: 1rem; background: var(--bg); border: 1px solid var(--warm-gray); border-radius: 2px; margin-bottom: 1.5rem; }
+    .project-impact-label { font-family: var(--font-mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sienna); margin-bottom: 0.25rem; }
+    .project-impact p { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .project-tags span { padding: 4px 10px; font-size: 0.6875rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--warm-mid); background: var(--bg); border: 1px solid var(--warm-gray); border-radius: 2px; }
+
+    /* Skills */
+    .skills-section { background: #fff; }
+    .skills-section h2 { font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 4rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+    .skill-category { margin-bottom: 1.5rem; }
+    .skill-category-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--warm-gray); }
+    .skill-category-header h3 { font-size: 1.125rem; font-weight: 700; color: var(--charcoal); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-tags span { padding: 8px 12px; font-size: 0.8125rem; font-weight: 500; color: var(--warm-mid); background: var(--bg); border: 1px solid var(--warm-gray); border-radius: 2px; transition: border-color 0.2s, color 0.2s; cursor: default; }
+    .skill-tags span:hover { border-color: rgba(199,91,57,0.3); color: var(--sienna); }
+
+    /* Achievements */
+    .achievements-section h2 { font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 4rem; }
+    .achievements-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 4rem; }
+    .competition-item { position: relative; padding-left: 1.5rem; padding-bottom: 1.5rem; border-left: 1px solid var(--warm-gray); }
+    .competition-item:last-child { padding-bottom: 0; }
+    .competition-item::before { content: ''; position: absolute; left: -5px; top: 0; width: 8px; height: 8px; transform: rotate(45deg); background: var(--sienna); }
+    .competition-rank { font-family: var(--font-display); font-size: 1.125rem; font-weight: 700; color: var(--sienna); }
+    .competition-event { font-weight: 500; color: var(--charcoal); margin-top: 0.25rem; }
+    .competition-venue { font-size: 0.875rem; color: var(--warm-mid); margin-top: 0.25rem; }
+    .competition-date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--warm-mid); margin-top: 0.25rem; }
+    .edu-card { padding: 1.5rem; background: #fff; border: 1px solid var(--warm-gray); border-radius: 2px; margin-bottom: 1.5rem; }
+    .edu-card h4 { font-size: 1.125rem; font-weight: 700; color: var(--charcoal); }
+    .edu-card .degree { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); margin-top: 0.25rem; }
+    .edu-card .period { font-family: var(--font-mono); font-size: 0.75rem; color: var(--warm-mid); }
+    .edu-card .coursework { font-size: 0.875rem; color: var(--warm-mid); margin-top: 0.75rem; }
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cert-card { padding: 1.25rem; background: #fff; border: 1px solid var(--warm-gray); border-radius: 2px; }
+    .cert-card p { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
+    .cert-card .issuer { font-size: 0.75rem; color: var(--warm-mid); margin-top: 0.25rem; }
+
+    /* Contact */
+    .contact-section { background: var(--charcoal); }
+    .contact-section h2 { font-size: clamp(1.875rem, 4vw, 3.5rem); font-weight: 700; color: #fff; line-height: 1.1; letter-spacing: -0.02em; }
+    .contact-section .section-label .line { background: rgba(255,255,255,0.1); }
+    .contact-desc { margin-top: 1.5rem; font-size: 1.125rem; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 36rem; }
+    .contact-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 4rem; }
+    .contact-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; transition: color 0.2s; }
+    .contact-link:hover { color: var(--sienna); }
+    .contact-link .icon-box { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 2px; transition: border-color 0.2s, background 0.2s; flex-shrink: 0; }
+    .contact-link:hover .icon-box { border-color: var(--sienna); background: rgba(199,91,57,0.1); }
+    .contact-link .icon-box svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.6); transition: fill 0.2s; }
+    .contact-link:hover .icon-box svg { fill: var(--sienna); }
+    .contact-link .label { font-family: var(--font-mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 2px; }
+    .contact-link .value { color: #fff; transition: color 0.2s; }
+    .contact-location { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.875rem; color: rgba(255,255,255,0.4); }
+
+    /* Footer */
+    footer { padding: 2rem; background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.05); }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-text { font-size: 0.75rem; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 0.5rem; }
+    .footer-logo { width: 20px; height: 20px; opacity: 0.6; }
+    .scroll-top { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 2px; cursor: pointer; transition: border-color 0.2s, background 0.2s; background: none; }
+    .scroll-top:hover { border-color: var(--sienna); background: rgba(199,91,57,0.1); }
+    .scroll-top svg { width: 14px; height: 14px; fill: rgba(255,255,255,0.4); }
+
+    /* Hobbies */
+    .hobbies-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+    .hobbies-row span { padding: 8px 16px; font-size: 0.875rem; font-weight: 500; color: var(--warm-mid); background: #fff; border: 1px solid var(--warm-gray); border-radius: 2px; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .achievements-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(8px); border-top: 1px solid var(--warm-gray); padding: 1.5rem 2rem; gap: 1.5rem; }
+      .hamburger { display: flex; }
+      .hero-metrics { grid-template-columns: 1fr 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero-metrics { grid-template-columns: 1fr; }
+    }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s cubic-bezier(0.23,1,0.32,1), transform 0.5s cubic-bezier(0.23,1,0.32,1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+      <path d="M32 4L56 56H44L38 42H26L20 56H8L32 4ZM35 34H29L32 24L35 34Z" fill="#C75B39"/>
+      <path d="M24 12H32V36L40 20V12H48V52H40V28L32 44H24V12Z" fill="#1A1A1A"/>
+    </svg>
+    Ashutosh Nagaria
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="https://linkedin.com/in/ashutosh-nagaria/" target="_blank" rel="noopener" class="nav-cta">LinkedIn</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-label">Product Manager · AI-Native Builder</p>
+      <h1>I build AI-native products that <span class="accent">scale to millions.</span></h1>
+      <p class="hero-desc">Led 0 to 1 product strategy for EmployeeWorks — shipped from concept to GA in 6 months. Designed the People Finder AI Agent using Knowledge Graphs. Scaled Notifications to 250M/month with 95% adoption.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric-card"><div class="metric-value">1M+</div><div class="metric-label">End Users</div></div>
+      <div class="metric-card"><div class="metric-value">6</div><div class="metric-label">Months to GA</div></div>
+      <div class="metric-card"><div class="metric-value">95%</div><div class="metric-label">Adoption Rate</div></div>
+      <div class="metric-card"><div class="metric-value">50+</div><div class="metric-label">Fortune 500 Pipeline</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label"><div class="diamond"></div><p>About Me</p><div class="line"></div></div>
+    <div class="about-grid">
+      <div>
+        <h2>Product leader who ships at enterprise scale.</h2>
+        <div class="about-text">
+          <p>I'm a Product Manager specializing in AI-native enterprise products. At ServiceNow, I led the EmployeeWorks portal from concept to general availability in just 6 months — an AI-native experience serving 1M+ end users across 50+ Fortune 500 customers.</p>
+          <p>My work sits at the intersection of AI and enterprise complexity: designing agentic workflows powered by Knowledge Graphs, building GenAI evaluation frameworks with 90%+ accuracy gates, and scaling notification engines to 250M+ monthly deliveries.</p>
+          <p>Before PM, I was a QA engineer at TCS/Digitate, an AI startup acquired by TCS. I hold an MBA in Marketing and IT from IMT Ghaziabad and a B.Tech in Electronics &amp; Communication Engineering.</p>
+        </div>
+        <div class="about-stats">
+          <div><div class="about-stat-value">25+</div><div class="about-stat-label">Customer Interviews</div></div>
+          <div><div class="about-stat-value">6</div><div class="about-stat-label">Releases Led</div></div>
+          <div><div class="about-stat-value">2</div><div class="about-stat-label">Scrum Teams</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="profile-photo-wrap">
+          <img class="profile-photo" src="assets/headshot.jpg" alt="Ashutosh Nagaria" />
+        </div>
+        <div class="quote-card">
+          <svg class="quote-icon" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          <p class="quote-text">Cooking taught me precision plus improvisation. Gym taught me that sustainable pace beats sprinting. Reading keeps me learning. That's how I approach product: I experiment boldly, enforce guardrails, and take care of my team.</p>
+          <p class="quote-author">— Ashutosh Nagaria</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience-section">
+  <div class="section-inner">
+    <div class="section-label"><div class="diamond"></div><p>Experience</p><div class="line"></div></div>
+    <h2>Career trajectory.</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h3>Product Manager</h3>
+        <div class="timeline-company">ServiceNow · Unified Employee Experiences</div>
+        <div class="timeline-period"><span>April 2024 – Present</span><span>·</span><span>Hyderabad, India</span></div>
+        <ul class="timeline-highlights">
+          <li>Led 0 to 1 product strategy for EmployeeWorks AI-native portal — concept to GA in 6 months</li>
+          <li>Designed People Finder AI Agent using LLM Text-to-Cypher over Knowledge Graphs</li>
+          <li>Built GenAI eval frameworks with 100+ evals, 90%+ release accuracy gate</li>
+          <li>Scaled Notifications Engine to 250M+/month across 5,000+ deployments</li>
+          <li>Managed 2 concurrent scrum teams + 5 US-based product designers</li>
+        </ul>
+        <div class="timeline-metrics">
+          <div><div class="timeline-metric-value">1M+</div><div class="timeline-metric-label">End Users</div></div>
+          <div><div class="timeline-metric-value">50+</div><div class="timeline-metric-label">Fortune 500 Pipeline</div></div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h3>Product Management Intern</h3>
+        <div class="timeline-company">ServiceNow · Now Mobile</div>
+        <div class="timeline-period"><span>April 2023 – May 2023</span><span>·</span><span>Hyderabad, India</span></div>
+        <ul class="timeline-highlights">
+          <li>Executed qualitative research on Now Mobile app to identify mobile adoption drivers</li>
+          <li>Synthesized findings into executive recommendations</li>
+          <li>Earned fast-track full-time PM Pre-Placement Offer (PPO)</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h3>Agile QA Engineer</h3>
+        <div class="timeline-company">TCS / Digitate · AI Products</div>
+        <div class="timeline-period"><span>November 2020 – May 2022</span><span>·</span><span>Pune, India</span></div>
+        <ul class="timeline-highlights">
+          <li>Ran functional, regression, and web testing across AI-powered product surfaces</li>
+          <li>Partnered with development teams to resolve defects and ensure release readiness</li>
+          <li>Products: flagship enterprise AI, ERPops, AIops, Workload Management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+  <div class="section-inner">
+    <div class="section-label"><div class="diamond"></div><p>Key Projects</p><div class="line"></div></div>
+    <h2>Products I've shipped.</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <span class="project-number">01</span>
+        <p class="project-subtitle">AI-Native Enterprise Experience</p>
+        <h3>EmployeeWorks AI Portal</h3>
+        <p>Led 0 to 1 product strategy for the EmployeeWorks AI-native portal — an omnichannel unified "front door" integrating IT, HR, and Finance workflows. Shipped from concept to GA in 6 months with early adopters including CVS Health, City of Raleigh, and Siemens Healthineers.</p>
+        <div class="project-impact"><p class="project-impact-label">Impact</p><p>10 pilot deployments targeting 1M+ end users. Employee experience business grew 5x YoY post-launch.</p></div>
+        <div class="project-tags"><span>Product Strategy</span><span>PRDs</span><span>Cross-functional Delivery</span><span>Go-to-Market</span></div>
+      </div>
+      <div class="project-card">
+        <span class="project-number">02</span>
+        <p class="project-subtitle">LLM + Knowledge Graph</p>
+        <h3>People Finder AI Agent</h3>
+        <p>Designed an AI agent that parses 20+ natural-language intents and generates Cypher queries against Knowledge Graph tables for end-to-end employee lookup across highly matrixed orgs. Features disambiguation UI, permission-scoped execution, and bidirectional canvas sync.</p>
+        <div class="project-impact"><p class="project-impact-label">Impact</p><p>Eliminated manual search friction across matrixed organizations. Chose Knowledge Graph over vector RAG for deterministic multi-hop traversal.</p></div>
+        <div class="project-tags"><span>LLM Text-to-Cypher</span><span>Knowledge Graphs</span><span>Neo4j</span><span>AI Evaluation</span></div>
+      </div>
+      <div class="project-card">
+        <span class="project-number">03</span>
+        <p class="project-subtitle">Smart Delivery at Scale</p>
+        <h3>Notifications Engine</h3>
+        <p>Authored PRDs and user stories for a low-noise, high-value notification system with smart batching and noise reduction. Delivered across portal, Teams, and Outlook — specifically built for Employee Slate for Now Assist.</p>
+        <div class="project-impact"><p class="project-impact-label">Impact</p><p>0 to 5,000+ deployments in 15 months. 250M+ monthly notifications. 95%+ adoption rate.</p></div>
+        <div class="project-tags"><span>Omnichannel Delivery</span><span>Smart Batching</span><span>Platform Engineering</span></div>
+      </div>
+      <div class="project-card">
+        <span class="project-number">04</span>
+        <p class="project-subtitle">3P Testing &amp; Accuracy Gates</p>
+        <h3>GenAI Evaluation Framework</h3>
+        <p>Established a rigorous evaluation framework with 100+ eval cases (50 functional, 40 negative/PII guardrail, 10 error-handling). Spearheaded behavioral benchmarking across third-party foundation models (Gemini, Claude, GPT-4) with in-session token caching.</p>
+        <div class="project-impact"><p class="project-impact-label">Impact</p><p>90%+ accuracy release gate enforced across all AI features. Eliminated redundant LLM calls within conversations.</p></div>
+        <div class="project-tags"><span>AI Evaluation</span><span>3P Testing</span><span>Token Caching</span><span>Green AI</span></div>
+      </div>
+      <div class="project-card">
+        <span class="project-number">05</span>
+        <p class="project-subtitle">Acquisition Integration</p>
+        <h3>Moveworks Integration</h3>
+        <p>Partnered with the Moveworks team post-acquisition to integrate Moveworks-powered notifications, org chart, and experience components into the unified portal. Built split-view SysID canvas sync and custom REST API endpoints for employee verification.</p>
+        <div class="project-impact"><p class="project-impact-label">Impact</p><p>Completed integration in under 3 weeks. CEO credited this as strong M&amp;A execution on Q1 2026 earnings call.</p></div>
+        <div class="project-tags"><span>API Integration</span><span>REST APIs</span><span>Employee Verification</span><span>Cross-team Collaboration</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <div class="section-inner">
+    <div class="section-label"><div class="diamond"></div><p>Skills &amp; Expertise</p><div class="line"></div></div>
+    <h2>What I bring to the table.</h2>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-category">
+          <div class="skill-category-header"><div class="diamond"></div><h3>Product</h3></div>
+          <div class="skill-tags">
+            <span>Zero-to-One Development</span><span>Roadmap Planning</span><span>PRD Writing</span><span>OKR Definition</span><span>Feature Prioritization</span><span>Agile/Scrum</span><span>Dependency Management</span><span>Customer Discovery</span><span>Go-to-Market</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-category">
+          <div class="skill-category-header"><div class="diamond"></div><h3>AI &amp; Technical</h3></div>
+          <div class="skill-tags">
+            <span>AI Product Management</span><span>Agentic Workflows</span><span>Knowledge Graph</span><span>AI Evaluation Frameworks</span><span>RAG</span><span>Prompt Engineering</span><span>Model Context Protocol (MCP)</span><span>Telemetry &amp; Instrumentation</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-category">
+          <div class="skill-category-header"><div class="diamond"></div><h3>Tools</h3></div>
+          <div class="skill-tags">
+            <span>Figma</span><span>Miro</span><span>Python</span><span>ServiceNow Platform</span><span>Claude</span><span>Jira</span><span>Confluence</span><span>Cursor</span><span>GitHub</span><span>Appsee</span><span>UXA</span><span>SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="achievements-section">
+  <div class="section-inner">
+    <div class="section-label"><div class="diamond"></div><p>Achievements &amp; Education</p><div class="line"></div></div>
+    <h2>Beyond the day job.</h2>
+    <div class="achievements-grid">
+      <div>
+        <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1.5rem;">Case Competitions</h3>
+        <div class="competition-item"><div class="competition-rank">Rank 1</div><div class="competition-event">Mind the Product Competition</div><div class="competition-venue">IIT Roorkee</div><div class="competition-date">Feb 2023</div></div>
+        <div class="competition-item"><div class="competition-rank">Rank 1</div><div class="competition-event">Startup Sprint</div><div class="competition-venue">Master's Union</div><div class="competition-date">Mar 2023</div></div>
+        <div class="competition-item"><div class="competition-rank">National Finalist (Top 5)</div><div class="competition-event">Reckitt Global Challenge</div><div class="competition-venue">Presented to MD of Reckitt India, livestreamed on NDTV India</div><div class="competition-date">2023</div></div>
+        <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--warm-gray);">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Leadership</h3>
+          <p style="font-size:0.875rem;color:var(--warm-mid);line-height:1.7;"><strong style="color:var(--charcoal);">Research and Analytics Consulting Enterprise (RACE)</strong>, Senior Executive Member, IMT Ghaziabad (2022–2024)</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1.5rem;">Education</h3>
+        <div class="edu-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+            <div><h4>IMT Ghaziabad</h4><p class="degree">MBA, Marketing and Information Technology</p></div>
+            <div style="text-align:right;"><div class="period">July 2022 – June 2024</div><div class="period">Ghaziabad, India</div></div>
+          </div>
+          <p class="coursework">Coursework: Tech Strategy, GTM, Pricing for Value</p>
+        </div>
+        <div class="edu-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+            <div><h4>Medicaps University</h4><p class="degree">B.Tech, Electronics and Communication Engineering</p></div>
+            <div style="text-align:right;"><div class="period">July 2016 – May 2020</div><div class="period">Indore, India</div></div>
+          </div>
+          <p class="coursework">Specialization: Computer Technology</p>
+        </div>
+        <h3 style="font-size:1.25rem;font-weight:700;margin-top:3rem;margin-bottom:1.5rem;">Certifications</h3>
+        <div class="cert-grid">
+          <div class="cert-card"><p>Product Leader Certification</p><p class="issuer">Product School · May 2024</p></div>
+          <div class="cert-card"><p>Certification Program in Product Management</p><p class="issuer">upGrad Campus · Jan 2023</p></div>
+        </div>
+        <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--warm-gray);">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem;">Outside of work</h3>
+          <div class="hobbies-row"><span>Cooking</span><span>Badminton</span><span>Reading</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="section-label"><div class="diamond"></div><p>Contact</p><div class="line"></div></div>
+    <div class="contact-grid">
+      <div>
+        <h2>Open to<br>opportunities.</h2>
+        <p class="contact-desc">Currently exploring roles at Big Tech and AI-native startups. If you're building something ambitious, I'd love to hear about it.</p>
+      </div>
+      <div>
+        <a href="mailto:anashutosh9@gmail.com" class="contact-link">
+          <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div><div class="label">Email</div><div class="value">anashutosh9@gmail.com</div></div>
+        </a>
+        <a href="tel:+919424343492" class="contact-link">
+          <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+          <div><div class="label">Phone</div><div class="value">+91 9424343492</div></div>
+        </a>
+        <a href="https://linkedin.com/in/ashutosh-nagaria/" target="_blank" rel="noopener" class="contact-link">
+          <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></div>
+          <div><div class="label">LinkedIn</div><div class="value">linkedin.com/in/ashutosh-nagaria</div></div>
+        </a>
+        <div class="contact-location">Based in Hyderabad, India · Open to relocation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-text">
+      <svg class="footer-logo" viewBox="0 0 64 64" fill="none">
+        <path d="M32 4L56 56H44L38 42H26L20 56H8L32 4ZM35 34H29L32 24L35 34Z" fill="#C75B39"/>
+        <path d="M24 12H32V36L40 20V12H48V52H40V28L32 44H24V12Z" fill="#1A1A1A"/>
+      </svg>
+      &copy; 2026 Ashutosh Nagaria. Built with intention.
+    </div>
+    <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  // Close mobile menu on link click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Scroll-triggered fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.timeline-item, .project-card, .edu-card, .competition-item, .metric-card, .quote-card').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
